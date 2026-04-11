@@ -1,0 +1,46 @@
+import java.util.*;
+public class ArraysCC {
+
+    public static int binarySearch(int[] nums, int target) {
+        int start = 0;
+        int end = nums.length - 1;
+
+        while (start <= end) {
+            int mid = (start + end) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            if (nums[mid] > target) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int nums[] = new int[6];
+
+        // Input array
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = sc.nextInt();
+        }
+        // Input target
+        int target = sc.nextInt();
+
+        // Call search function
+        int result = binarySearch(nums, target);
+
+        // Output result
+        if (result != -1) {
+            System.out.println("Element found at index: " + result);
+        } else {
+            System.out.println("Element not found");
+        }
+    }
+}
