@@ -1,0 +1,6 @@
+public class Strings{
+    public static void main(String args[]){
+        String str = "AshishKumar";
+        System.out.print(str.substring(0,5));
+    }
+}
