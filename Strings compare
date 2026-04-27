@@ -1,0 +1,12 @@
+public class Strings{
+    public static void main(String args[]){
+        String s1 = "Ashish";
+        String s2 = new String("Ashish");
+
+        if(s1.equals(s2)){
+            System.out.print("yes equals");
+        }else{
+            System.out.print("not equals");
+        }
+    }
+}
