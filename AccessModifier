@@ -1,0 +1,19 @@
+public class OOPS{
+    public static void main(String args[]){
+        BankAccount myAcc = new BankAccount();
+
+        myAcc.username = "AshishKumar";
+        System.out.println(myAcc.username);
+
+        myAcc.setPassword("asdfghj");
+        //we can not access the password only changes the password as it is with private access modifier
+    }
+}
+class BankAccount{
+    public String username;
+    private String password;
+
+    public void setPassword(String pwd){
+        password = pwd;
+    }
+}
