@@ -1,0 +1,15 @@
+public class OOPS{
+    public static void main(String args[]){
+        Student s1 = new Student();
+        //System.out.println(s1.name);
+        
+    }
+}
+class Student{
+    String name;
+    int age;
+    //constructor is a special method which has same name as class name and it is used to initialize the object of class
+    Student(){
+        System.out.println("Constructor is called...");
+    }
+} 
