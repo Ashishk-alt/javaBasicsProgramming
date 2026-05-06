@@ -1,0 +1,25 @@
+public class OOPS{
+    public static void main(String args[]){
+        dog tomy = new dog();
+        tomy.eat();
+        tomy.legs = 4;
+        System.out.println(tomy.legs);
+    }
+}
+class Animal{
+    String color;
+
+    void eat(){
+        System.out.println("eats");
+    }
+
+    void breath(){
+        System.out.println("breath");
+    }
+}
+class Mammal extends Animal{
+    int legs;
+}
+class dog extends Mammal{
+    String breeds;
+}
