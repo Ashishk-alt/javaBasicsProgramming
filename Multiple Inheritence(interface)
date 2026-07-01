@@ -1,0 +1,24 @@
+import java.util.*;
+public class OOPS{
+    public static void main(String[] args){
+        Bear b = new Bear();
+        b.eat();
+    }
+}
+interface herbivore{
+    default void eat(){
+        System.out.println("eats grasses");
+    }
+}
+interface carnivore{
+    default void eat(){
+        System.out.println("eats meat");
+    }
+}
+class Bear implements herbivore, carnivore{
+    public void eat(){
+        herbivore.super.eat();
+        carnivore.super.eat();
+        System.out.println("Omnivore");
+    }
+}
