@@ -1,0 +1,32 @@
+import java.util.*;
+public class OOPS{
+    public static void main(String[] args){
+        Queen q = new Queen();
+        q.moves();
+
+    }
+}
+interface chessPlayer{
+    void moves();
+}
+
+class Queen implements chessPlayer{
+    public void moves(){
+        System.out.println("left, right, up, down, diagonally");
+    }
+}
+class Rook implements chessPlayer{
+    public void moves(){
+        System.out.println("left, right, up, down");
+    }
+}
+class King implements chessPlayer{
+    public void moves(){
+        System.out.println("left, right, up, down, diagonally(1 step)");
+    }
+}
+class Pawn implements chessPlayer{
+    public void moves(){
+        System.out.println("left, right, up, down - (1 step)");
+    }
+}
