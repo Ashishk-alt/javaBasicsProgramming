@@ -1,0 +1,18 @@
+public class RecursionBasics{
+    public static int Fibo(int n){
+        if(n==0){
+            return 0;
+        }
+        if(n==1){
+            return 1;
+        }
+        int fibnm1 = Fibo(n-1);
+        int fibnm2 = Fibo(n-2);
+        int fibn = fibnm1 + fibnm2;
+        return fibn;
+    }
+    public static void main(String[] args){
+        int n = 5;
+        System.out.print(Fibo(n));
+    }
+}
